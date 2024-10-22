@@ -233,6 +233,7 @@ class Pipeline(_Pipeline):
             token_pairs,
             add_special_tokens=True,
             padding=True,
+            truncation=True,
             return_tensors='tf',
             return_attention_masks=True,
             max_length=512
