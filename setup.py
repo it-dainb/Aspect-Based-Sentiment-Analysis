@@ -33,5 +33,5 @@ setup(
         'spacy==3.1.1',
         'ipython==7.16.3'
     ],
-    python_requires='==3.6'
+    python_requires='==3.6*
 )
