@@ -27,7 +27,6 @@ from .data_types import Output
 from .data_types import OutputBatch
 
 from .loads import load
-from .loads import load_examples
 
 from .models import ABSClassifier
 from .models import BertABSCConfig
