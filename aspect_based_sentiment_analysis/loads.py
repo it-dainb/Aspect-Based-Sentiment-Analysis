@@ -5,7 +5,6 @@ from typing import List
 
 import transformers
 
-from . import utils
 from .data_types import LabeledExample
 from .models import BertABSCConfig
 from .models import BertABSClassifier
