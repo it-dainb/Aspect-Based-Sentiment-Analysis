@@ -24,11 +24,14 @@ setup(
     include_package_data=False,
     packages=find_packages(),
     install_requires=[
-        'tensorflow==2.5',
-        'transformers==4.8',
-        'scikit-learn',
-        'testfixtures',
-        'optuna',
-        'spacy==3.7.5'
-    ]
+        'scikit-learn==0.24.2',
+        'dataclasses==0.8',
+        'tensorflow==2.5.0',
+        'testfixtures==6.17.1',
+        'transformers==4.8.2',
+        'optuna==2.8.0',
+        'spacy==3.1.1',
+        'ipython==7.16.3'
+    ],
+    python_requires='==3.6'
 )
