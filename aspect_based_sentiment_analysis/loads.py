@@ -4,7 +4,6 @@ from typing import Callable
 from typing import List
 
 import transformers
-from google.cloud.exceptions import NotFound
 
 from . import utils
 from .data_types import LabeledExample
@@ -39,28 +38,5 @@ def load(
 
     except EnvironmentError as error:
         text = 'Model or Tokenizer not found. Please check a documentation.'
-        logger.error(text)
-        raise error
-
-
-def load_examples(
-        dataset: str = 'semeval',
-        domain: str = 'laptop',
-        test: bool = False
-) -> List[LabeledExample]:
-    """ Download a dataset from the bucket if it is needed. """
-    split = 'train' if not test else 'test'
-    name = f'classifier-{dataset}-{domain}-{split}.bin'
-    local_path = os.path.join(DOWNLOADS_DIR, name)
-
-    try:
-        local_path = utils.file_from_bucket(name)
-        examples = utils.load(local_path)
-        return examples
-
-    except NotFound as error:
-        if os.path.isfile(local_path):
-            os.remove(local_path)
-        text = 'Dataset not found. Please check a documentation.'
         logger.error(text)
         raise error
