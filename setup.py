@@ -26,10 +26,7 @@ setup(
     install_requires=[
         'tensorflow==2.5',
         'transformers==4.8',
-        'pytest',
         'scikit-learn',
-        'ipython',
-        'google-cloud-storage',
         'testfixtures',
         'optuna',
         'spacy'
