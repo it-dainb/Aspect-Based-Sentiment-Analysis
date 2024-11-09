@@ -30,6 +30,5 @@ setup(
         'testfixtures',
         'optuna',
         'spacy'
-    ],
-    python_requires='==3.7.*',
+    ]
 )
