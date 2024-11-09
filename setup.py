@@ -29,6 +29,6 @@ setup(
         'scikit-learn',
         'testfixtures',
         'optuna',
-        'spacy'
+        'spacy==3.7.5'
     ]
 )
